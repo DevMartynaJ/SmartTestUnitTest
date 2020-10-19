@@ -12,4 +12,8 @@
 	<name>Smart Testing</name>
 	<description>Smart Testing</description>
 
+	<modules>
+		<module>01-introduction-to-testing</module>
+	</modules>
+
 </project>
