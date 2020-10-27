@@ -26,9 +26,3 @@ $ ./mvnw clean install
 Kod produkcyjny nie jest kodem referencyjnym. Tzn. jest on przygotowany pod szkolenie, a nie ma być wzorem pisania kodu produkcyjnego.
 
 Kod jest napisany w języku angielskim natomiast JavaDoci i komentarze piszemy po polsku, żeby uczestnikom szkolenia było wygodniej przyswajać wiedzę.
-
-== Uwagi dla osób przepisujących kod na inne języki
-
-W wielu modułach w plikach `README.adoc` znajduje się sekcja `Notatki`, która jest często wyciągniętymi notatkami ze slajdów. Ta sekcja zostanie usunięta dla uczestników szkolenia.
-
-Na slajdach klasy nie mają prefiksów z numerkami (e.g. nie ma `_19_DatabaseAccessorImpl` tylko `DatabaseAccessorImpl`). Numerki są dla uczestników i dla Was sugestią kolejności pojawiania się kodu na slajdach.
