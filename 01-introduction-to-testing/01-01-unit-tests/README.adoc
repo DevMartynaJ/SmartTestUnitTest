@@ -6,7 +6,7 @@ Tematy omawiane w tej części:
 * Czemu testy są opłacalne
 * Jakie zasady powinny spełniać dobre testy
 * Jak unikać fałszywych pozytywów:
-   - przykład: `LoanOrderServiceTest.chainedAssertObjectShouldCreateStudentLoanOrderSimpleAssertion`
+   - przykład: `LoanOrderServiceTest.shouldFailSimpleVerification`
 * Rodzaje testów
 * Struktura testów
   - zobacz np. `NationalIdentificationNumberVerificationTest`
