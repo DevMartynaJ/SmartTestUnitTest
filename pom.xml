@@ -14,6 +14,7 @@
 
 	<modules>
 		<module>01-introduction-to-testing</module>
+		<module>02-unit-testing</module>
 	</modules>
 
 </project>
