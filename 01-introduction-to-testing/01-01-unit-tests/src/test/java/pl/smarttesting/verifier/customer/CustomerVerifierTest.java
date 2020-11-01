@@ -17,6 +17,10 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 /**
  * Klasa zawiera przykłady inicjalizacji w polach testowych, przykład false-positive,
  * przykład zastosowania Test Doubles.
+ *
+ * Suite'a testów zawiera test na przypadek negatywny: `CustomerVerifierTest.shouldFailSimpleVerification`,
+ * ale nie zawiera tesów weryfikujących pozytywną weryfikację, przez co testy nie wychwytują,
+ * że kod produkcyjny zwraca domyślną wartość i brakuje implementacji logiki biznesowej
  */
 class CustomerVerifierTest {
 
@@ -38,7 +42,9 @@ class CustomerVerifierTest {
 		assertThat(result.getUserId()).isEqualTo(customer.getUuid());
 	}
 
-	// Przykład złego testu: test, który przechodzi nawet bez implementacji
+	// Test weryfikuje przypadek negatywnej weryfikacji, ale w klasie zabrakło testu na pozytywną
+	// weryfikację klienta. Przez to testy nie wychwytują, że kod produkcyjny zwraca domyślną wartość
+	// i brakuje implementacji logiki biznesowej.
 	@Test
 	void shouldFailSimpleVerification() {
 		// Given
