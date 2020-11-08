@@ -17,6 +17,7 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.Mockito.when;
 import static pl.smarttesting.order.LoanOrderAssert.then;
 
@@ -86,6 +87,11 @@ class LoanOrderServiceTest extends LoanOrderTestBase {
 		// Weryfikacja tego, że dana interakcja nie wystąpiła
 		verify(postgresAccessor, never())
 				.updatePromotionDiscount(eq("Student Promo"), any());
+
+		// Alternatywna asercja wobec tej powyżej: można zweryfikować, czy nie nastąpiła
+		// żadna inna asercja na danym mocku (dla przykładu dodaliśmy obydwie, ale
+		// normalnie byłoby to stosowane zamiast tej asercji powyżej)
+		verifyNoMoreInteractions(postgresAccessor);
 	}
 
 	// Przykład AssertObject Pattern
