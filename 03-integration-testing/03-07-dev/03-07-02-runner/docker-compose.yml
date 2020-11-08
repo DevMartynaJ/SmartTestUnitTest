@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:9.6.12
+    environment:
+      POSTGRES_DB: test
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+  rabbitmq:
+    image: rabbitmq:3.7-management-alpine
+  app:
+    image: smarttesting/integration-testing-app:latest
+    ports:
+      - 7654:7654
+    environment:
+      SERVER_PORT: 7654
+      DB_HOST: postgres
+      RABBIT_HOST: rabbitmq
+    links:
+      - postgres
+      - rabbitmq
+
